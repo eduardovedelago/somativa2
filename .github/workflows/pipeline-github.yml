@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: | 
-          pip3 install -v flash-attn==2.1.1 
+          pip install Flask 
           python3 app.py
       - uses: AppThreat/sast-scan-action@master
         with:

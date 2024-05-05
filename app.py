@@ -3,7 +3,6 @@ from flask import request
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def index():
     valor = request.args.get("valor", "")

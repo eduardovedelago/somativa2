@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: python3 app.py
+      - run: | 
+        pip3 install -v flash-attn==2.1.1 
+        python3 app.py
       - uses: AppThreat/sast-scan-action@master
         with:
           type: "python"
